@@ -1,0 +1,13 @@
+server:
+  port: 8013
+spring:
+  application:
+    name: config-server
+eureka:
+  registerName: lishunyi
+  registerPassword: 123456
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.registerName}:${eureka.registerPassword}@${eureka.instance.hostname}:8001/eureka
