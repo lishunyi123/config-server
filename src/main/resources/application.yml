@@ -3,6 +3,14 @@ server:
 spring:
   application:
     name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          search-paths: repository
+          uri: git@github.com:lishunyi123/spring-config-repository.git
+          username: lishunyi123
+          password: RailEdefjolidC2
 eureka:
   registerName: lishunyi
   registerPassword: 123456
